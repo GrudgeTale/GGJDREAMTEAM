@@ -127,12 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   size: 1
   minSize: 0.5
   maxSize: 1.5
-  speed: 50
+  speed: 10
   maxLifetime: 30
 --- !u!61 &8749768461543774191
 BoxCollider2D:
