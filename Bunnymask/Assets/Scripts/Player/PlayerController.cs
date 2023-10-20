@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
             
         }
         
+        /* Screen Warp
         Vector2 newPos = transform.position;
         if(transform.position.y > screenTop){
             newPos.y = screenBottom;
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
             newPos.x = screenRight;
         }
 
-        transform.position = newPos;
+        transform.position = newPos;*/
 
     }
 
