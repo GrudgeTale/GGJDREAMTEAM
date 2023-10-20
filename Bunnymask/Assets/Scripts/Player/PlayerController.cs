@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
             lastShot = Time.time;
             GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
             newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletSpeed);
+            Destroy(newBullet, 4f);
 
 
             player.AddForce(-transform.up *strength, ForceMode2D.Impulse);
