@@ -126,11 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7047979216565818848}
-  strength: 5
-  screenTop: 11
-  screenBottom: -11
-  screenRight: 20
-  screenLeft: -20
+  strength: 8
+  screenTop: 10
+  screenBottom: -10
+  screenRight: 19
+  screenLeft: -19
   bullet: {fileID: 2015652091549083796, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
   bulletSpeed: 500
   cooldown: 0.4
