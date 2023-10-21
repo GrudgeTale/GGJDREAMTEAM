@@ -23,7 +23,15 @@ public class Ammo : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && CurrentAmmo > 0 && !isReloading)
         {
             Shoot();
-            move.Knockback();
+            try{
+                if(CurrentAmmo >= 0){
+                    move.Knockback();
+                }
+            }
+            catch{
+
+            }
+            
         }
 
         if (Input.GetMouseButtonDown(1))

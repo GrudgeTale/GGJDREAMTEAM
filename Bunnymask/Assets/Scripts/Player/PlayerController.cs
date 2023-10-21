@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
 
+    [SerializeField] Sprite ship;
+
     [SerializeField] private float strength = 10;
 
     // To determine when to use Screen Wrapping
