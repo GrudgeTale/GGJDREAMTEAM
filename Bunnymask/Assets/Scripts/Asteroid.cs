@@ -20,6 +20,10 @@ public class Asteroid : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
+    public float currentTime = 0f;
+
+    public float minuteTime = 0f;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -28,13 +32,22 @@ public class Asteroid : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
     void Start()
+
     {
+        currentTime = minuteTime;
         _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
 
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
 
         _rigidbody.mass = this.size;
+    }
+
+    void Update()
+    {
+        currentTime += 1;
+        print(currentTime);
+  
     }
 
     // Update is called once per frame

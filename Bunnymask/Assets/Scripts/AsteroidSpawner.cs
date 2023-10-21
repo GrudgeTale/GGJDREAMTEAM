@@ -13,11 +13,28 @@ public class AsteroidSpawner : MonoBehaviour
     public float spawnDistance = 15.0f;
 
     public int spawnAmount = 1;
-    
+
+    public float currentTime = 0f;
+
+    public float minuteTime = 10f;
+
     private void Start()
     {
         // it will call every 2 seconds
         InvokeRepeating(nameof(Spawn), this.spawnRate, this.spawnRate);
+    }
+
+    private void Update()
+    {
+        if(currentTime < minuteTime)
+        {
+            currentTime += 1 * Time.deltaTime;
+        }
+        else
+        {
+            asteroidPrefab.maxSize += 1;
+            currentTime = 0f;
+        }
     }
     private void Spawn()
     {
