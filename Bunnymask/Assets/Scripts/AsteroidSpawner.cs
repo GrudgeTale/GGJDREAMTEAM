@@ -28,12 +28,13 @@ public class AsteroidSpawner : MonoBehaviour
             Vector3 spawnPoint = this.transform.position + spawnDirection;
 
 
-            float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
-            Quaternion rotation = Quaternion.AngleAxis(variance,Vector3.forward);
+             float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
+             Quaternion rotation = Quaternion.AngleAxis(variance,Vector3.forward);
             
             Asteroid asteroid = Instantiate(this.asteroidPrefab, spawnPoint, rotation);
             asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
-            asteroid.SetTrajectory(rotation * -spawnDirection);
+         //   asteroid.SetTrajectory(-spawnDirection);
+           asteroid.SetTrajectory(rotation * -spawnDirection);
         }
     }
 }
