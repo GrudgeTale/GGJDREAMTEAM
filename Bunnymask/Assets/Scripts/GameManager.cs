@@ -14,35 +14,7 @@ public class GameManager : MonoBehaviour
 
     public int lives = 3;
 
-    public int Scoring;
-
-    public int highScore;
-
-    public float time = 0f;
-
-    bool gameEnd = false;
-
-    void Start(){
-        highScore = PlayerPrefs.GetInt("highScore", 0);
-    }
-
-    void Update(){
-        if(lives > 0){
-            time += 1 * Time.deltaTime;
-        }
-        else{
-            // Send to Game End Screen
-            if(gameEnd == false){
-                if(highScore < Scoring){
-                    PlayerPrefs.SetInt("highScore", Scoring);
-                    highScore = PlayerPrefs.GetInt("highScore");
-                }
-                print(Scoring);
-                print(highScore);
-                gameEnd = true;
-            } 
-        }
-    }
+    public int Scoring = 10;
 
     public void PlayerDied()
     {
