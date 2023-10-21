@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public float cooldown;
     float lastShot;
 
+ 
+
+
     void Start(){
         player = GetComponent<Rigidbody2D>();   
     }

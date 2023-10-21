@@ -14,13 +14,15 @@ public class GameManager : MonoBehaviour
 
     public int lives = 3;
 
+    public int Scoring = 10;
+
     public void PlayerDied()
     {
         this.lives--;
 
         if(this.lives <= 0)
         {
-            GameOver();
+            
         }
         else
         {
@@ -28,11 +30,6 @@ public class GameManager : MonoBehaviour
         }
 
         
-    }
-
-    private void GameOver()
-    {
-        //TODO
     }
 
     private void Respawn()
@@ -47,6 +44,15 @@ public class GameManager : MonoBehaviour
     private void TurnOnCollisions()
     {
         this.player.gameObject.layer = LayerMask.NameToLayer("Player");
+    }
+
+    public void AsteroidDestroyed(Asteroid asteroid)
+    {
+        this.Scoring += 100;
+    }
+    public void BigAsteroidDestroyed(BigAsteroid bigasteroid)
+    {
+        this.Scoring += 200;
     }
 
 }

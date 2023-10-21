@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,10 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int maxHealth = 3;
+    public int maxHealth = 2;
     public int currentHealth;
+
+
 
     void Start()
     {
@@ -14,8 +17,4 @@ public class Health : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
