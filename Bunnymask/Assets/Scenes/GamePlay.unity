@@ -817,6 +817,10 @@ PrefabInstance:
       value: Comet Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: spawnRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
       value: 18
       objectReference: {fileID: 0}

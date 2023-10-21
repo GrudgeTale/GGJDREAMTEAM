@@ -127,14 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc5295a1a53d5043bb213dc888c4a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 3852ef83408647544ab4ac0c9b2240e5, type: 3}
-  - {fileID: 21300000, guid: 3852ef83408647544ab4ac0c9b2240e5, type: 3}
-  size: 1
-  minSize: 2
-  maxSize: 8
-  speed: 10
-  maxLifetime: 30
+  nsize: 1
+  nminSize: 2
+  nmaxSize: 3
+  nspeed: 50
+  nmaxLifetime: 15
 --- !u!61 &8942017829765216571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -193,4 +190,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
-  moveSpeed: 5
+  moveSpeed: 15
