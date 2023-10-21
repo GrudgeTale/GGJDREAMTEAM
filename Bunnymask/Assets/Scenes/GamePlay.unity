@@ -172,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.1597214, y: 0.29411554}
+  m_Offset: {x: 3.1203156, y: 0.29411554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -183,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 35.90056, y: 1.5882311}
+  m_Size: {x: 37.870934, y: 1.5882311}
   m_EdgeRadius: 0
 --- !u!4 &257066258
 Transform:
@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 257066256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2156882, y: -10.67, z: -10.058117}
+  m_LocalPosition: {x: -3.2156882, y: -9.25, z: -10.058117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -271,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 268011586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2156882, y: 10.59, z: -10.058117}
+  m_LocalPosition: {x: -3.2156882, y: 9.61, z: -10.058117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,11 +405,8 @@ MonoBehaviour:
   player: {fileID: 1651691404}
   respawnTime: 1
   respawnInvulnerablitiyTime: 2
-  lives: 3
-  Scoring: 0
-  highScore: 0
-  time: 0
-  alive: 0
+  lives: 1000
+  Scoring: 10
 --- !u!4 &485444829
 Transform:
   m_ObjectHideFlags: 0
@@ -703,7 +700,7 @@ MonoBehaviour:
   BigasteroidPrefab: {fileID: 1535443548995050909, guid: 002f7529397b98a4595bb36b9cc75aa0, type: 3}
   trajectoryVariance: 15
   spawnRate: 4
-  spawnDistance: 21
+  spawnDistance: 22
   spawnAmount: 1
   currentTime: 0
   minuteTime: 10
@@ -967,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: asteroidPrefab
@@ -1027,7 +1024,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05303192, y: 1.4239464}
+  m_Offset: {x: -0.1834135, y: 1.4239464}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1038,7 +1035,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.11446, y: 19.918152}
+  m_Size: {x: 1.6415691, y: 19.918152}
   m_EdgeRadius: 0
 --- !u!4 &1467003228
 Transform:
@@ -1488,7 +1485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
