@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7822904948970236838}
   - component: {fileID: 8942017829765216571}
   - component: {fileID: 5944138132294125948}
-  - component: {fileID: 5127101397901204855}
   m_Layer: 8
   m_Name: Asteroid Tracking
   m_TagString: Asteroid
@@ -193,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
   moveSpeed: 15
+<<<<<<< HEAD:Bunnymask/Assets/Asteroid Objects/fist/Asteroid Tracking.prefab
 --- !u!95 &5127101397901204855
 Animator:
   serializedVersion: 5
@@ -214,3 +214,5 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+=======
+>>>>>>> parent of 2faceef (animation):Bunnymask/Assets/Asteroid Objects/Asteroid Tracking.prefab
