@@ -311,6 +311,7 @@ MonoBehaviour:
   respawnInvulnerablitiyTime: 2
   lives: 1000
   Scoring: 10
+  time: 0
 --- !u!4 &485444829
 Transform:
   m_ObjectHideFlags: 0
@@ -432,7 +433,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 7.9363265
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -703,6 +704,10 @@ PrefabInstance:
       propertyPath: move
       value: 
       objectReference: {fileID: 1651691404}
+    - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: reloadDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: current
       value: 
