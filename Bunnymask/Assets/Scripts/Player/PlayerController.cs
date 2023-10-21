@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float bulletSpeed;
     public float cooldown;
     float lastShot;
+    public Ammo current;
 
  
 
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             player.velocity = Vector3.zero;
             player.angularVelocity = 0.0f;
-
+            current.CurrentAmmo = 6;
 
             this.gameObject.SetActive(false);
 

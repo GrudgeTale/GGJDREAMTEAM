@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c605b83978c45ad44b88a56d739e68d4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &7047979216565818848
@@ -136,7 +136,7 @@ MonoBehaviour:
   bullet: {fileID: 2015652091549083796, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
   bulletSpeed: 700
   cooldown: 0.4
-  move: {fileID: 0}
+  current: {fileID: 0}
 --- !u!61 &1298788627283307541
 BoxCollider2D:
   m_ObjectHideFlags: 0
