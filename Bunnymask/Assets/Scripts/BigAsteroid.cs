@@ -62,9 +62,11 @@ public class BigAsteroid : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-        
-            CreateSplit();
-            CreateSplit();
+            if((this.size * 0.5f) >= 3f)
+            {
+             CreateSplit();
+             CreateSplit();
+             }
             Destroy(this.gameObject);
         }
     }
