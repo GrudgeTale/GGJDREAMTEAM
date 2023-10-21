@@ -570,7 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BigasteroidPrefab: {fileID: 1535443548995050909, guid: 002f7529397b98a4595bb36b9cc75aa0, type: 3}
   trajectoryVariance: 15
-  spawnRate: 8
+  spawnRate: 5
   spawnDistance: 22
   spawnAmount: 1
   currentTime: 0
@@ -906,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnRate
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: minuteTime
