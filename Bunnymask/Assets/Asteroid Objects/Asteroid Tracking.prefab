@@ -194,6 +194,7 @@ MonoBehaviour:
   moveSpeed: 15
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Bunnymask/Assets/Asteroid Objects/fist/Asteroid Tracking.prefab
 --- !u!95 &5127101397901204855
 Animator:
@@ -218,6 +219,8 @@ Animator:
   m_WriteDefaultValuesOnDisable: 0
 =======
 >>>>>>> parent of 2faceef (animation):Bunnymask/Assets/Asteroid Objects/Asteroid Tracking.prefab
+=======
+>>>>>>> parent of 14c56c8 (Merge branch 'main' of https://github.com/GrudgeTale/GGJDREAMTEAM)
 =======
 >>>>>>> parent of 14c56c8 (Merge branch 'main' of https://github.com/GrudgeTale/GGJDREAMTEAM)
 =======
