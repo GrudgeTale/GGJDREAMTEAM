@@ -51,11 +51,11 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 0f71438bb0503444992010b64dfe3afe, type: 3}
   size: 1
-  minSize: 3
-  maxSize: 6
+  minSize: 6
+  maxSize: 8
   speed: 30
   maxLifetime: 30
-  health: 1
+  health: 2
 --- !u!50 &8070743999330528679
 Rigidbody2D:
   serializedVersion: 4
