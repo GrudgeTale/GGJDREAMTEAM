@@ -666,26 +666,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
-      propertyPath: screenTop
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
-      propertyPath: screenLeft
-      value: -18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
-      propertyPath: bulletSpeed
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
-      propertyPath: screenRight
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
-      propertyPath: screenBottom
-      value: -10
-      objectReference: {fileID: 0}
+    - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: 1651691404}
     - target: {fileID: 9035709589593101217, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -759,7 +743,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4282337160603842479, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
