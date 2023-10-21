@@ -5,6 +5,7 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
 
+   
 
     //public Sprite[] sprites;
     [SerializeField]
@@ -17,6 +18,9 @@ public class Asteroid : MonoBehaviour
     public float nspeed = 50.0f;
     [SerializeField]
     public float nmaxLifetime = 30.0f;
+    [SerializeField]
+    private float health = 1;
+
 
 
    // private SpriteRenderer _spriteRenderer;
@@ -58,14 +62,15 @@ public class Asteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        health -= 1;
+        if (health <= 0)
         {
-            //if((this.size * 0.5f) > this.minSize)
-            //{
-               // CreateSplit();
-               // CreateSplit();
-           // }
-            Destroy(this.gameObject);
+            if (collision.gameObject.tag == "Bullet")
+            {
+                health -= 1;
+                FindObjectOfType<GameManager>().AsteroidDestroyed(this);
+                Destroy(this.gameObject);
+            }
         }
     }
 

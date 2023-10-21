@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public float cooldown;
     float lastShot;
 
+ 
+
+
     void Start(){
         player = GetComponent<Rigidbody2D>();   
     }
@@ -35,7 +38,6 @@ public class PlayerController : MonoBehaviour
         transform.up = direction;
         // Moving After each click of mouse button
         if(Input.GetMouseButtonDown(0)){
-            // Generate bullets
             if(Time.time-lastShot < cooldown){
                 return;
             }
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour
             
          //   DestroyBullet bullet = Instantiate(this.bulletPrefab, this.transform.position, this.transform.rotation);
          //  bullet.Project(this.transform.up);
+
             player.AddForce(-transform.up *strength, ForceMode2D.Impulse);
             
         }

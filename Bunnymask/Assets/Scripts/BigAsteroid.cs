@@ -8,6 +8,8 @@ public class BigAsteroid : MonoBehaviour
 
     public Sprite[] sprites;
 
+    
+
 
     [SerializeField]
     public float size = 1.0f;
@@ -19,6 +21,9 @@ public class BigAsteroid : MonoBehaviour
     public float speed = 50.0f;
     [SerializeField]
     public float maxLifetime = 30.0f;
+
+    [SerializeField]
+    private float health = 2;
 
 
      private SpriteRenderer _spriteRenderer;
@@ -60,14 +65,21 @@ public class BigAsteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+            
+
         if (collision.gameObject.tag == "Bullet")
         {
-            if((this.size * 0.5f) >= 3f)
+            health -= 1; 
+            if (health <= 0)
             {
-             CreateSplit();
-             CreateSplit();
-             }
-            Destroy(this.gameObject);
+                if ((this.size * 0.5f) >= 3f)
+                {
+                    CreateSplit();
+                    CreateSplit();
+                }
+                FindObjectOfType<GameManager>().BigAsteroidDestroyed(this);
+                Destroy(this.gameObject);
+            }
         }
     }
 
