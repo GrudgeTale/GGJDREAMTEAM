@@ -16,6 +16,14 @@ public class GameManager : MonoBehaviour
 
     public int Scoring = 10;
 
+    public float time;
+
+    public void Update(){
+        if(lives > 0){
+            time += 1 * Time.deltaTime;
+        }
+    }
+
     public void PlayerDied()
     {
         this.lives--;
