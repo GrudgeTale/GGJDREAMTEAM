@@ -764,6 +764,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
+--- !u!1001 &1306772200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709118894408418875, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964343607615252504, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: m_Name
+      value: Comet Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: spawnRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: spawnDistance
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: asteroidPrefab
+      value: 
+      objectReference: {fileID: 7822904948970236838, guid: 91bfe1c0ccd820f47a0da64becc4c96a, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
 --- !u!1 &1467003226
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +996,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 497415638}
   - {fileID: 8934665034758498017}
+  - {fileID: 1306772200}
   - {fileID: 741797833}
   - {fileID: 268011588}
   - {fileID: 728429235}
