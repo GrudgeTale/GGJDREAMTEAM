@@ -16,11 +16,31 @@ public class GameManager : MonoBehaviour
 
     public int Scoring = 10;
 
+    public int highScore;
+
     public float time;
+
+    public bool alive;
+
+    public void Start(){
+        highScore = PlayerPrefs.GetInt("highScore", 0);
+        alive = true;
+    }
 
     public void Update(){
         if(lives > 0){
             time += 1 * Time.deltaTime;
+        }
+        else{
+            if(alive){
+                if(highScore < Scoring){
+                    PlayerPrefs.SetInt("highScore", Scoring);
+                }
+                print(Scoring);
+                print(highScore);
+            }
+            alive = false;
+
         }
     }
 
