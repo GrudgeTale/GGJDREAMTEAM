@@ -40,7 +40,11 @@ public class PlayerController : MonoBehaviour
         transform.up = direction;
 
         if(Input.GetMouseButtonDown(0)){
-            if(current.CurrentAmmo <= 0){
+            if(current.isReloading){
+                return;
+            }
+            else{
+                if(current.CurrentAmmo <= 0){
                 return;
             }
             else{
@@ -58,6 +62,8 @@ public class PlayerController : MonoBehaviour
                 current.shootSoundEffect.Play();
                 current.Shoot();
             }
+            }
+            
         }
         
 

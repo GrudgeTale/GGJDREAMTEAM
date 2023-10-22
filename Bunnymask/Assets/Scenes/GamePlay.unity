@@ -293,7 +293,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 7822904948970236838, guid: 91bfe1c0ccd820f47a0da64becc4c96a, type: 3}
   trajectoryVariance: 0
   spawnRate: 10
-  spawnDistance: 30
+  spawnDistance: 27
   spawnAmount: 1
   currentTime: 0
   maxTimeSec: 30
@@ -500,7 +500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276, y: 73.8}
+  m_AnchoredPosition: {x: 361, y: 63}
   m_SizeDelta: {x: 216.3463, y: 60.1855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397456571
@@ -1081,7 +1081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -99}
+  m_AnchoredPosition: {x: 13, y: -109}
   m_SizeDelta: {x: 227.6125, y: 31.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543652125
@@ -1462,6 +1462,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: bulletSpeed
+      value: 900
+      objectReference: {fileID: 0}
     - target: {fileID: 8596199105239094361, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_Size.x
       value: 0.24
@@ -1544,7 +1548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2560,8 +2564,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16, y: 58}
-  m_SizeDelta: {x: -828.3875, y: -422.03}
+  m_AnchoredPosition: {x: 15, y: 46}
+  m_SizeDelta: {x: -511.1023, y: -422.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498748540
 MonoBehaviour:
@@ -2725,7 +2729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: -60}
+  m_AnchoredPosition: {x: 11, y: -72}
   m_SizeDelta: {x: 189.1119, y: 35.985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551935830
@@ -4065,8 +4069,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 24, y: 29.595016}
-  m_SizeDelta: {x: -744.0561, y: -422.03}
+  m_AnchoredPosition: {x: 14, y: 16}
+  m_SizeDelta: {x: -512.01, y: -422.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920723078
 MonoBehaviour:
@@ -4166,7 +4170,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.9946289, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4229,8 +4233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 17, y: 104}
-  m_SizeDelta: {x: -513.6191, y: -401.1003}
+  m_AnchoredPosition: {x: 10, y: 89}
+  m_SizeDelta: {x: -312.6246, y: -401.1003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046001031
 MonoBehaviour:
@@ -4379,7 +4383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276, y: -130.5}
+  m_AnchoredPosition: {x: 361, y: -130.5}
   m_SizeDelta: {x: 216.3463, y: 60.1855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065959993
@@ -4473,7 +4477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276, y: 91.5}
+  m_AnchoredPosition: {x: 361, y: 79}
   m_SizeDelta: {x: 216.3463, y: 60.1855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101150317
@@ -4602,7 +4606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
-      value: 30
+      value: 27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
