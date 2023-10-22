@@ -290,14 +290,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dcdd68ba0d282747abd5730e493deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 0}
+  asteroidPrefab: {fileID: 7822904948970236838, guid: 91bfe1c0ccd820f47a0da64becc4c96a, type: 3}
   trajectoryVariance: 15
   spawnRate: 10
   spawnDistance: 15
   spawnAmount: 1
   currentTime: 0
-  maxTimeSec: 10
-  spawnGrowth: 0.05
+  maxTimeSec: 30
+  spawnGrowth: 0.1
   sizeGrowth: 0.001
   speedGrowth: 0.001
 --- !u!114 &198228341 stripped
@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BigasteroidPrefab: {fileID: 1535443548995050909, guid: 002f7529397b98a4595bb36b9cc75aa0, type: 3}
   trajectoryVariance: 15
-  spawnRate: 4
+  spawnRate: 10
   spawnDistance: 25
   spawnAmount: 1
   currentTime: 0
@@ -3222,15 +3222,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnRate
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: maxTimeSec
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: minuteTime
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: spawnGrowth
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
