@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public PlayerController player;
 
+    public GameOver gameOver;
+
     public float respawnTime = 3.0f;
 
     public float respawnInvulnerablitiyTime = 3.0f;
@@ -41,10 +43,10 @@ public class GameManager : MonoBehaviour
                 if(highScore < Scoring){
                     PlayerPrefs.SetInt("highScore", Scoring);
                 }
-                print(Scoring);
-                print(highScore);
+                dead = true;
+                gameOver.GameisOver();
             }
-            dead = true;
+            
 
         }
     }
