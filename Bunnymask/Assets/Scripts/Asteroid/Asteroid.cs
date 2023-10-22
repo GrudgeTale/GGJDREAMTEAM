@@ -33,8 +33,8 @@ public class Asteroid : MonoBehaviour
 
     private void Awake()
     {
-        nspeed = nspeed;
-        nmaxSize = nmaxSize;
+        // nspeed = nspeed;
+        // nmaxSize = nmaxSize;
     // _spriteRenderer = GetComponent<SpriteRenderer>();   
     _rigidbody = GetComponent<Rigidbody2D>();
     }
