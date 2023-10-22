@@ -12,6 +12,9 @@ public class Ammo : MonoBehaviour
     public float reloadDelay = 1.5f;
     public PlayerController move;
 
+    // SFX
+    [SerializeField] private AudioSource shootSoundEffect;
+
     void Start()
     {
         CurrentAmmo = MaxAmmo;
@@ -26,6 +29,7 @@ public class Ammo : MonoBehaviour
             try{
                 if(CurrentAmmo >= 0){
                     move.Knockback();
+                    shootSoundEffect.Play();
                 }
             }
             catch{

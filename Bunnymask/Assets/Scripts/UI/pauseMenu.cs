@@ -8,6 +8,8 @@ public class pauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
+    [SerializeField] AudioSource buttonClickSFX;
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +24,7 @@ public class pauseMenu : MonoBehaviour
     }
 
     public void Resume(){
+        buttonClickSFX.Play();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -34,6 +37,7 @@ public class pauseMenu : MonoBehaviour
     }
 
     public void loadMenu(){
+        buttonClickSFX.Play();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -41,7 +45,7 @@ public class pauseMenu : MonoBehaviour
     }
 
     public void QuitGame(){
-        Debug.Log("Quitting Game");
+        buttonClickSFX.Play();
         Application.Quit();
     }
 }

@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
 
     public bool dead;
 
+    [SerializeField] private AudioSource gameOverSFX;
+    [SerializeField] private AudioSource deathSFX;
+    [SerializeField] private AudioSource destroyAsteroidSFX;
+
     public void Start(){
         highScore = PlayerPrefs.GetInt("highScore", 0);
         dead = false;
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
         }
         else{
             if(!dead){
+                gameOverSFX.Play();
                 if(highScore < Scoring){
                     PlayerPrefs.SetInt("highScore", Scoring);
                 }
@@ -46,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDied()
     {
+        deathSFX.Play();
         this.lives--;
 
         if(this.lives <= 0)
@@ -76,10 +82,12 @@ public class GameManager : MonoBehaviour
 
     public void AsteroidDestroyed(Asteroid asteroid)
     {
+        destroyAsteroidSFX.Play();
         this.Scoring += 100;
     }
     public void BigAsteroidDestroyed(BigAsteroid bigasteroid)
     {
+        destroyAsteroidSFX.Play();
         this.Scoring += 200;
     }
 

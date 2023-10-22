@@ -24,9 +24,6 @@ public class PlayerController : MonoBehaviour
     float lastShot;
     public Ammo current;
 
- 
-
-
     void Start(){
         player = GetComponent<Rigidbody2D>();   
     }
@@ -68,6 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Asteroid"))
         {
+            
             player.velocity = Vector3.zero;
             player.angularVelocity = 0.0f;
             current.CurrentAmmo = 6;
