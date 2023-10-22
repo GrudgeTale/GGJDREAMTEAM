@@ -39,10 +39,27 @@ public class PlayerController : MonoBehaviour
 
         transform.up = direction;
 
+        if(Input.GetMouseButtonDown(0)){
+            if(current.CurrentAmmo <= 0){
+                return;
+            }
+            else{
+                if (Time.time - lastShot < cooldown)
+                {
+                    return;
+                }
+                
+                lastShot = Time.time;
+                GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);
+                newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletSpeed);
+                Destroy(newBullet, 4f);
+                current.CurrentAmmo--;
+                Knockback();
+                current.shootSoundEffect.Play();
+                current.Shoot();
+            }
+        }
         
-
-
-
 
         /* Screen Warp
         Vector2 newPos = transform.position;
@@ -70,7 +87,7 @@ public class PlayerController : MonoBehaviour
             
             player.velocity = Vector3.zero;
             player.angularVelocity = 0.0f;
-            current.CurrentAmmo = 6;
+            current.CurrentAmmo = current.MaxAmmo;
 
             this.gameObject.SetActive(false);
 

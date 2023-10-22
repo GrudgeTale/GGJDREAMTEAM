@@ -7,13 +7,13 @@ public class Ammo : MonoBehaviour
     public float cooldown;
     float lastShot;
     public int CurrentAmmo;
-    public int MaxAmmo = 6;
+    public int MaxAmmo = 10;
     public bool isReloading = false;
     public float reloadDelay = 1.5f;
     public PlayerController move;
 
     // SFX
-    [SerializeField] private AudioSource shootSoundEffect;
+    public AudioSource shootSoundEffect;
 
     void Start()
     {
@@ -23,14 +23,11 @@ public class Ammo : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && CurrentAmmo > 0 && !isReloading)
+        /*if (Input.GetMouseButtonDown(0) && CurrentAmmo > 0 && !isReloading)
         {
-            if (Time.time - lastShot < cooldown)
-            {
-                return;
-            }
-            lastShot = Time.time;
+            
             Shoot();
+
             try{
                 if(CurrentAmmo >= 0){
                     move.Knockback();
@@ -41,11 +38,11 @@ public class Ammo : MonoBehaviour
 
             }
             
-        }
+        }*/
 
         if (Input.GetMouseButtonDown(1))
         {
-            if(CurrentAmmo < 6){
+            if(CurrentAmmo < 10){
                 Reload();
             }
         }
@@ -53,10 +50,7 @@ public class Ammo : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
-        newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletSpeed);
-        Destroy(newBullet, 4f);
-        CurrentAmmo--;
+        // CurrentAmmo--;
 
         if (CurrentAmmo <= 0)
         {
