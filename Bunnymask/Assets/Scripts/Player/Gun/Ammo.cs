@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
+   // public bullet bulletPrefab;
+    
     [SerializeField] GameObject bullet;
     public float bulletSpeed;
     public float cooldown;
@@ -53,6 +55,9 @@ public class Ammo : MonoBehaviour
             return;
         }
         lastShot = Time.time;
+
+      //  bullet bullet = Instantiate(this.bulletPrefab, this.transform.position, this.transform.rotation);
+        //bullet.Project(this.transform.up);
 
         GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
         newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletSpeed);

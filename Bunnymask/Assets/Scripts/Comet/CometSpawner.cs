@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidSpawner : MonoBehaviour
+public class CometSpawner : MonoBehaviour
 {
     public Asteroid asteroidPrefab;
 
@@ -21,7 +21,10 @@ public class AsteroidSpawner : MonoBehaviour
     [SerializeField]
     private float spawnGrowth = 0.05f;
     [SerializeField]
-    private float  sizeGrowth = 0.001f;
+    private float sizeGrowth = 0.001f;
+
+    [SerializeField]
+    private float speedGrowth = 0.001f;
 
     private void Start()
     {
@@ -35,11 +38,11 @@ public class AsteroidSpawner : MonoBehaviour
     {
         currentTime += 1 * Time.deltaTime;
 
-        if(currentTime>=maxTimeSec)
+        if (currentTime >= maxTimeSec)
         {
-            spawnRate -= spawnGrowth;
-            asteroidPrefab.nmaxSize += sizeGrowth;
-            InvokeRepeating(nameof(Spawn), this.spawnRate, this.spawnRate);
+            this.spawnRate -= this.spawnGrowth;
+            asteroidPrefab.nmaxSize += this.sizeGrowth;
+            asteroidPrefab.nspeed += this.speedGrowth;
             currentTime = 0f;
         }
 
@@ -60,20 +63,20 @@ public class AsteroidSpawner : MonoBehaviour
     }
     private void Spawn()
     {
-        for(int i = 0; i < this.spawnAmount; i++)
+        for (int i = 0; i < this.spawnAmount; i++)
         {
 
             Vector3 spawnDirection = Random.insideUnitCircle.normalized * this.spawnDistance;
             Vector3 spawnPoint = this.transform.position + spawnDirection;
 
 
-             float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
-             Quaternion rotation = Quaternion.AngleAxis(variance,Vector3.forward);
-            
+            float variance = Random.Range(-this.trajectoryVariance, this.trajectoryVariance);
+            Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
+
             Asteroid asteroid = Instantiate(this.asteroidPrefab, spawnPoint, rotation);
             asteroid.nsize = Random.Range(asteroid.nminSize, asteroid.nmaxSize);
-         //   asteroid.SetTrajectory(-spawnDirection);
-           asteroid.SetTrajectory(rotation * -spawnDirection);
+            //   asteroid.SetTrajectory(-spawnDirection);
+            asteroid.SetTrajectory(rotation * -spawnDirection);
         }
     }
 }

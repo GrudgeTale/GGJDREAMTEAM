@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float strength = 10;
 
+   // public bullet bulletPrefab;
+
     // To determine when to use Screen Wrapping
     public float screenTop; 
     public float screenBottom;

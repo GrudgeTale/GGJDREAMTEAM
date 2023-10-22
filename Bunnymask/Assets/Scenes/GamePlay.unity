@@ -273,6 +273,44 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
+--- !u!1 &121312939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2964343607615252504, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+  m_PrefabInstance: {fileID: 1306772200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &121312942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121312939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcdd68ba0d282747abd5730e493deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: 0}
+  trajectoryVariance: 15
+  spawnRate: 10
+  spawnDistance: 15
+  spawnAmount: 1
+  currentTime: 0
+  maxTimeSec: 10
+  spawnGrowth: 0.05
+  sizeGrowth: 0.001
+  speedGrowth: 0.001
+--- !u!114 &198228341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8375306748503387314, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
+  m_PrefabInstance: {fileID: 1074233196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4db9209c2b9997479208a5fe3a6875e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257066256
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +360,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.1203156, y: 0.29411554}
+  m_Offset: {x: 3.3046846, y: 0.29411554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -333,7 +371,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 37.870934, y: 1.5882311}
+  m_Size: {x: 45.245667, y: 1.5882311}
   m_EdgeRadius: 0
 --- !u!4 &257066258
 Transform:
@@ -344,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 257066256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2156882, y: -9.25, z: -10.058117}
+  m_LocalPosition: {x: -3.2156882, y: -8.52, z: -10.058117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,7 +437,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.201353, y: -0.25209904}
+  m_Offset: {x: 3.3173084, y: -0.25209904}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -410,7 +448,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 39.50501, y: 1.5041981}
+  m_Size: {x: 44.838856, y: 1.5041981}
   m_EdgeRadius: 0
 --- !u!4 &268011588
 Transform:
@@ -421,7 +459,7 @@ Transform:
   m_GameObject: {fileID: 268011586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2156882, y: 9.61, z: -10.058117}
+  m_LocalPosition: {x: -3.2156882, y: 7.3, z: -10.058117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -558,7 +596,7 @@ MonoBehaviour:
   player: {fileID: 1651691404}
   respawnTime: 1
   respawnInvulnerablitiyTime: 2
-  lives: 3
+  lives: 1000
   Scoring: 0
   highScore: 0
   time: 0
@@ -1109,7 +1147,7 @@ Transform:
   m_GameObject: {fileID: 728429233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.54, y: -1.2923412, z: -10.058117}
+  m_LocalPosition: {x: -22.39, y: -1.2923412, z: -10.058117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1147,7 +1185,7 @@ MonoBehaviour:
   BigasteroidPrefab: {fileID: 1535443548995050909, guid: 002f7529397b98a4595bb36b9cc75aa0, type: 3}
   trajectoryVariance: 15
   spawnRate: 4
-  spawnDistance: 22
+  spawnDistance: 25
   spawnAmount: 1
   currentTime: 0
   minuteTime: 10
@@ -1176,19 +1214,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5026
       objectReference: {fileID: 0}
     - target: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5026
+      objectReference: {fileID: 0}
+    - target: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5026
       objectReference: {fileID: 0}
     - target: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.2513
       objectReference: {fileID: 0}
     - target: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2513
       objectReference: {fileID: 0}
     - target: {fileID: 858382013172177618, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1255,9 +1297,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1651691404}
     - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: MaxAmmo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: CurrentAmmo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: reloadDelay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 198228341}
     - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: shootSoundEffect
       value: 
@@ -1266,6 +1320,14 @@ PrefabInstance:
       propertyPath: current
       value: 
       objectReference: {fileID: 1651691406}
+    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: cooldown
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 198228341}
     - target: {fileID: 8596199105239094361, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: m_Size.x
       value: 0.24
@@ -1577,6 +1639,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8510389510536671474, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4282337160603842479, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
     m_RemovedGameObjects: []
@@ -1637,20 +1703,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnRate
-      value: 4
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: maxTimeSec
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
-      value: 21
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: asteroidPrefab
       value: 
       objectReference: {fileID: 7822904948970236838, guid: 91bfe1c0ccd820f47a0da64becc4c96a, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: trajectoryVariance
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2964343607615252504, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 121312942}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
 --- !u!1 &1388566330
 GameObject:
@@ -2006,7 +2084,7 @@ Transform:
   m_GameObject: {fileID: 1467003226}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.5, y: -1.2923412, z: -10.058117}
+  m_LocalPosition: {x: 21.79, y: -1.2923412, z: -10.058117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3144,7 +3222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnRate
-      value: 2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
+      propertyPath: maxTimeSec
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: minuteTime
@@ -3152,7 +3234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423479434284113943, guid: 1aa797bd92b179a45b770089747a509c, type: 3}
       propertyPath: spawnDistance
-      value: 19
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

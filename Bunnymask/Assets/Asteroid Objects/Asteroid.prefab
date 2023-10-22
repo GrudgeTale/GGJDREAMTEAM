@@ -128,8 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nsize: 1
   nminSize: 1.5
-  nmaxSize: 1.5
-  nspeed: 50
+  nmaxSize: 3
+  nspeed: 18
   nmaxLifetime: 30
   health: 1
 --- !u!61 &8749768461543774191

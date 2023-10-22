@@ -13,7 +13,7 @@ public class Asteroid : MonoBehaviour
     [SerializeField]
     public float nminSize = 2.0f;
     [SerializeField]
-    public float nmaxSize = 2.0f;
+    public float nmaxSize = 3.0f;
     [SerializeField]
     public float nspeed = 50.0f;
     [SerializeField]
@@ -33,9 +33,10 @@ public class Asteroid : MonoBehaviour
 
     private void Awake()
     {
-        
-       // _spriteRenderer = GetComponent<SpriteRenderer>();   
-        _rigidbody = GetComponent<Rigidbody2D>();
+        nspeed = nspeed;
+        nmaxSize = nmaxSize;
+    // _spriteRenderer = GetComponent<SpriteRenderer>();   
+    _rigidbody = GetComponent<Rigidbody2D>();
     }
     void Start()
 

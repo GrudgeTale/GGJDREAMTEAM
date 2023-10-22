@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8510389510536671474}
   - component: {fileID: -758722850901150520}
   - component: {fileID: 2371274488068664300}
+  - component: {fileID: 8375306748503387314}
   - component: {fileID: 4282337160603842479}
   m_Layer: 7
   m_Name: Bullet
@@ -172,6 +173,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4c132a5cfaa0945a024a8da0d82ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8375306748503387314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015652091549083796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4db9209c2b9997479208a5fe3a6875e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 500
+  maxLifetime: 10
 --- !u!114 &4282337160603842479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892fd1f942aa7be489bcbebe8c344da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8375306748503387314}
   bullet: {fileID: 2015652091549083796}
   bulletSpeed: 700
   cooldown: 0.2
@@ -191,3 +207,5 @@ MonoBehaviour:
   MaxAmmo: 6
   isReloading: 0
   reloadDelay: 1.5
+  move: {fileID: 0}
+  shootSoundEffect: {fileID: 0}
