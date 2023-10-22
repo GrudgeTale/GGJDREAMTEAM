@@ -293,7 +293,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 7822904948970236838, guid: 91bfe1c0ccd820f47a0da64becc4c96a, type: 3}
   trajectoryVariance: 0
   spawnRate: 10
-  spawnDistance: 15
+  spawnDistance: 30
   spawnAmount: 1
   currentTime: 0
   maxTimeSec: 30
