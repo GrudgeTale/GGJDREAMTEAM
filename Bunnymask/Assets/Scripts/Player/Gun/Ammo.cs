@@ -36,7 +36,9 @@ public class Ammo : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            Reload();
+            if(CurrentAmmo < 6){
+                Reload();
+            }
         }
     }
 

@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour
 
     public float time;
 
-    public bool alive;
+    public bool dead;
 
     public void Start(){
         highScore = PlayerPrefs.GetInt("highScore", 0);
-        alive = true;
+        dead = false;
     }
 
     public void Update(){
@@ -32,14 +32,14 @@ public class GameManager : MonoBehaviour
             time += 1 * Time.deltaTime;
         }
         else{
-            if(alive){
+            if(!dead){
                 if(highScore < Scoring){
                     PlayerPrefs.SetInt("highScore", Scoring);
                 }
                 print(Scoring);
                 print(highScore);
             }
-            alive = false;
+            dead = true;
 
         }
     }
