@@ -646,7 +646,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -666,11 +672,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: f52f1e6e-6f8f-4266-a350-c31674dcfe01
+  cloudProjectId: 3925269b-7251-4eaf-9cb9-c84e345a8d0b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Bunnymask (1)
-  organizationId: grudgetale
+  projectName: Bunnymask
+  organizationId: xayonite
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

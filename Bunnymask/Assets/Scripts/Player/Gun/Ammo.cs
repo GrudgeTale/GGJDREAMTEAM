@@ -14,6 +14,7 @@ public class Ammo : MonoBehaviour
 
     // SFX
     public AudioSource shootSoundEffect;
+    public AudioSource reloadSoundEffect;
 
     void Start()
     {
@@ -63,6 +64,7 @@ public class Ammo : MonoBehaviour
         if (!isReloading)
         {
             isReloading = true;
+            reloadSoundEffect.Play();
             Invoke("PerformReload", reloadDelay);
         }
     }
