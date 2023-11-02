@@ -300,17 +300,6 @@ MonoBehaviour:
   spawnGrowth: 0.1
   sizeGrowth: 0.001
   speedGrowth: 0.001
---- !u!114 &198228341 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8375306748503387314, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
-  m_PrefabInstance: {fileID: 1074233196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4db9209c2b9997479208a5fe3a6875e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &257066256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,7 +1565,7 @@ PrefabInstance:
     - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 198228341}
+      objectReference: {fileID: 0}
     - target: {fileID: 3919271921966609849, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: shootSoundEffect
       value: 
@@ -1585,6 +1574,10 @@ PrefabInstance:
       propertyPath: reloadSoundEffect
       value: 
       objectReference: {fileID: 1651691412}
+    - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2015652091549083796, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
     - target: {fileID: 6517757150508155603, guid: ef862f61559fe414d96db58f9e489b0b, type: 3}
       propertyPath: current
       value: 
@@ -1911,12 +1904,19 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4282337160603842479, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8510389510536671474, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 4282337160603842479, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
+    - {fileID: 8375306748503387314, guid: 5234510017192fe43a00051f27c9f37a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
