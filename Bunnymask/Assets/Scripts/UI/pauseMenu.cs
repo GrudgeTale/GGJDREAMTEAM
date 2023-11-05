@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public static bool GameIsPaused;
     public GameObject pauseMenuUI;
 
     [SerializeField] AudioSource buttonClickSFX;
+
+    void Start(){
+        GameIsPaused = false;
+    }
 
     // Update is called once per frame
     void Update()

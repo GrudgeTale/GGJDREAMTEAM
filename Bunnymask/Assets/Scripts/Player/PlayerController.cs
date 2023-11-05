@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         transform.up = direction;
 
         if(Input.GetMouseButtonDown(0)){
-            if(current.isReloading){
+            if(current.isReloading || pauseMenu.GameIsPaused){
                 return;
             }
             else{
