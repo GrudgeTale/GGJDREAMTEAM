@@ -24,10 +24,20 @@ public class PlayerController : MonoBehaviour
     public float bulletSpeed;
     public float cooldown;
     float lastShot;
-    public Ammo current;
+    
+    // Ammo System
+    public int CurrentAmmo;
+    public int MaxAmmo = 10;
+    public bool isReloading = false;
+    public float reloadDelay = 1.5f;
+
+    // SFX
+    public AudioSource shootSoundEffect;
+    public AudioSource reloadSoundEffect;
 
     void Start(){
         player = GetComponent<Rigidbody2D>();   
+        CurrentAmmo = MaxAmmo;
     }
 
     void Update(){
@@ -39,12 +49,20 @@ public class PlayerController : MonoBehaviour
 
         transform.up = direction;
 
+        // Checks for Reload when RMB is pressed
+        if (Input.GetMouseButtonDown(1))
+        {
+            if(CurrentAmmo < 10){
+                Reload();
+            }
+        }
+
         if(Input.GetMouseButtonDown(0)){
-            if(current.isReloading || pauseMenu.GameIsPaused){
+            if(isReloading || pauseMenu.GameIsPaused){
                 return;
             }
             else{
-                if(current.CurrentAmmo <= 0){
+                if(CurrentAmmo <= 0){
                 return;
             }
             else{
@@ -52,37 +70,12 @@ public class PlayerController : MonoBehaviour
                 {
                     return;
                 }
-                
                 lastShot = Time.time;
-                GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);
-                newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletSpeed);
-                Destroy(newBullet, 4f);
-                current.CurrentAmmo--;
-                Knockback();
-                current.shootSoundEffect.Play();
-                current.Shoot();
+                Shoot();
             }
             }
             
         }
-        
-
-        /* Screen Warp
-        Vector2 newPos = transform.position;
-        if(transform.position.y > screenTop){
-            newPos.y = screenBottom;
-        }
-        if(transform.position.y < screenBottom){
-            newPos.y = screenTop;
-        }
-        if(transform.position.x > screenRight){
-            newPos.x = screenLeft;
-        }
-        if(transform.position.x < screenLeft){
-            newPos.x = screenRight;
-        }
-
-        transform.position = newPos;*/
 
     }
 
@@ -93,7 +86,7 @@ public class PlayerController : MonoBehaviour
             
             player.velocity = Vector3.zero;
             player.angularVelocity = 0.0f;
-            current.CurrentAmmo = current.MaxAmmo;
+            CurrentAmmo = MaxAmmo;
 
             this.gameObject.SetActive(false);
 
@@ -104,5 +97,34 @@ public class PlayerController : MonoBehaviour
     public void Knockback()
     {
         player.AddForce(-transform.up * strength, ForceMode2D.Impulse);
+    }
+
+    public void Shoot()
+    {
+        GameObject newBullet = Instantiate (bullet, transform.position, transform.rotation);
+        newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletSpeed);
+        Destroy(newBullet, 4f);
+        CurrentAmmo--;
+        Knockback();
+        shootSoundEffect.Play();
+        if (CurrentAmmo <= 0)
+        {
+            Reload();
+        }
+    }
+    public void Reload()
+    {
+        if (!isReloading)
+        {
+            isReloading = true;
+            reloadSoundEffect.Play();
+            Invoke("PerformReload", reloadDelay);
+        }
+    }
+
+    private void PerformReload()
+    {
+        CurrentAmmo = MaxAmmo;
+        isReloading = false;
     }
 }

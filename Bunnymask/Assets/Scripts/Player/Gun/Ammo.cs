@@ -2,21 +2,9 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
-    public float bulletSpeed;
-    public float cooldown;
-    float lastShot;
-    public int CurrentAmmo;
-    public int MaxAmmo = 10;
-    public bool isReloading = false;
-    public float reloadDelay = 1.5f;
-    public PlayerController move;
+    // This was used as reference
 
-    // SFX
-    public AudioSource shootSoundEffect;
-    public AudioSource reloadSoundEffect;
-
-    void Start()
+    /*void Start()
     {
         CurrentAmmo = MaxAmmo;
 
@@ -24,22 +12,6 @@ public class Ammo : MonoBehaviour
 
     void Update()
     {
-        /*if (Input.GetMouseButtonDown(0) && CurrentAmmo > 0 && !isReloading)
-        {
-            
-            Shoot();
-
-            try{
-                if(CurrentAmmo >= 0){
-                    move.Knockback();
-                    shootSoundEffect.Play();
-                }
-            }
-            catch{
-
-            }
-            
-        }*/
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -74,4 +46,5 @@ public class Ammo : MonoBehaviour
         CurrentAmmo = MaxAmmo;
         isReloading = false;
     }
+    */
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AmmoCount : MonoBehaviour
 {
-    public Ammo player;
+    public PlayerController player;
     public Text ammoText;
 
     // Update is called once per frame
